@@ -76,7 +76,7 @@ public class MatchServiceImplTest {
     }
 
     @Test
-    public void createMatch_scoreBiggerThan2_exception() {
+    public void createMatch_invalidScores_exception() {
         Pair<Player, Player> playersA = Pair.of(player1, player2);
         Pair<Player, Player> playersB = Pair.of(player3, player4);
         mockTeams(playersA, playersB);
@@ -85,42 +85,6 @@ public class MatchServiceImplTest {
         expectedException.expectMessage("Invalid match scores");
 
         matchService.createMatch(playersA, 3, playersB, 0);
-    }
-
-    @Test
-    public void createMatch_drawBiggerThan1_exception() {
-        Pair<Player, Player> playersA = Pair.of(player1, player2);
-        Pair<Player, Player> playersB = Pair.of(player3, player4);
-        mockTeams(playersA, playersB);
-
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("Invalid match scores");
-
-        matchService.createMatch(playersA, 2, playersB, 2);
-    }
-
-    @Test
-    public void createMatch_drawLowerThan1_exception() {
-        Pair<Player, Player> playersA = Pair.of(player1, player2);
-        Pair<Player, Player> playersB = Pair.of(player3, player4);
-        mockTeams(playersA, playersB);
-
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("Invalid match scores");
-
-        matchService.createMatch(playersA, 0, playersB, 0);
-    }
-
-    @Test
-    public void createMatch_scoreLowerThan0_exception() {
-        Pair<Player, Player> playersA = Pair.of(player1, player2);
-        Pair<Player, Player> playersB = Pair.of(player3, player4);
-        mockTeams(playersA, playersB);
-
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("Invalid match scores");
-
-        matchService.createMatch(playersA, 2, playersB, -1);
     }
 
     private void assertMatch(Match createdMatch,
