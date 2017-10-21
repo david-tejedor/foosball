@@ -1,9 +1,10 @@
-package com.myproject.foosball.application.match;
+package com.myproject.foosball.domain.match;
 
-import com.myproject.foosball.domain.Match;
-import com.myproject.foosball.domain.TeamScore;
+import com.myproject.foosball.domain.team.TeamScore;
 
 public class MatchScoresSpecification extends MatchSpecification {
+
+    // possibility to customize it entering possible results to constructor
 
     @Override
     public boolean isSatisfiedBy(Match match) {

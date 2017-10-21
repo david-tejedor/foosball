@@ -1,7 +1,7 @@
 package com.myproject.foosball.application.team;
 
-import com.myproject.foosball.domain.Player;
-import com.myproject.foosball.domain.Team;
+import com.myproject.foosball.domain.player.Player;
+import com.myproject.foosball.domain.team.Team;
 import org.springframework.stereotype.Service;
 
 @Service

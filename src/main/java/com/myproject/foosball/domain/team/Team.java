@@ -1,4 +1,6 @@
-package com.myproject.foosball.domain;
+package com.myproject.foosball.domain.team;
+
+import com.myproject.foosball.domain.player.Player;
 
 import java.util.UUID;
 

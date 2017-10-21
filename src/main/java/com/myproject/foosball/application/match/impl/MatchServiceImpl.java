@@ -1,13 +1,13 @@
 package com.myproject.foosball.application.match.impl;
 
-import com.myproject.foosball.application.match.MatchScoresSpecification;
+import com.myproject.foosball.domain.match.MatchScoresSpecification;
 import com.myproject.foosball.application.match.MatchService;
-import com.myproject.foosball.application.match.MatchUniquePlayersSpecification;
+import com.myproject.foosball.domain.match.MatchUniquePlayersSpecification;
 import com.myproject.foosball.application.team.TeamService;
-import com.myproject.foosball.domain.Match;
-import com.myproject.foosball.domain.Player;
-import com.myproject.foosball.domain.Team;
-import com.myproject.foosball.domain.TeamScore;
+import com.myproject.foosball.domain.match.Match;
+import com.myproject.foosball.domain.player.Player;
+import com.myproject.foosball.domain.team.Team;
+import com.myproject.foosball.domain.team.TeamScore;
 import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,8 +1,8 @@
 package com.myproject.foosball.application.team.impl;
 
 import com.myproject.foosball.application.team.TeamService;
-import com.myproject.foosball.domain.Player;
-import com.myproject.foosball.domain.Team;
+import com.myproject.foosball.domain.player.Player;
+import com.myproject.foosball.domain.team.Team;
 import org.junit.Test;
 
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.myproject.foosball.domain;
+package com.myproject.foosball.domain.team;
 
 public class TeamScore {
 
@@ -21,8 +21,8 @@ public class TeamScore {
 
         TeamScore teamScore = (TeamScore) o;
 
-        if (score != teamScore.score) return false;
-        return team != null ? team.equals(teamScore.team) : teamScore.team == null;
+        return score == teamScore.score &&
+                (team != null ? team.equals(teamScore.team) : teamScore.team == null);
     }
 
     @Override

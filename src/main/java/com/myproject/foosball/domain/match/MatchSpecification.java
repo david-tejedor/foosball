@@ -1,6 +1,6 @@
-package com.myproject.foosball.application.match;
+package com.myproject.foosball.domain.match;
 
-import com.myproject.foosball.domain.Match;
+import com.myproject.foosball.domain.match.Match;
 
 public abstract class MatchSpecification {
 

@@ -1,18 +1,15 @@
-package com.myproject.foosball.domain;
+package com.myproject.foosball.domain.player;
 
 import java.util.UUID;
 
-public class Match {
+public class Player {
 
     public final UUID id;
-    public final TeamScore teamScoreA;
-    public final TeamScore teamScoreB;
+    public final String name;
 
-    public Match(TeamScore teamScoreA, TeamScore teamScoreB) {
+    public Player(String name) {
         this.id = UUID.randomUUID();
-
-        this.teamScoreA = teamScoreA;
-        this.teamScoreB = teamScoreB;
+        this.name = name;
     }
 
     @Override
@@ -20,7 +17,7 @@ public class Match {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Match team = (Match) o;
+        Player team = (Player) o;
 
         return id.equals(team.id);
     }

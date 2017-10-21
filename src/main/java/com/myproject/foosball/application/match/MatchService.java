@@ -1,7 +1,7 @@
 package com.myproject.foosball.application.match;
 
-import com.myproject.foosball.domain.Match;
-import com.myproject.foosball.domain.Player;
+import com.myproject.foosball.domain.match.Match;
+import com.myproject.foosball.domain.player.Player;
 import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.stereotype.Service;
 

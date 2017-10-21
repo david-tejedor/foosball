@@ -1,7 +1,6 @@
-package com.myproject.foosball.application.match;
+package com.myproject.foosball.domain.match;
 
-import com.myproject.foosball.domain.Match;
-import com.myproject.foosball.domain.Player;
+import com.myproject.foosball.domain.player.Player;
 
 import java.util.stream.Stream;
 
