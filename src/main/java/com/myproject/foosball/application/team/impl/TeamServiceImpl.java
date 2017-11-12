@@ -26,12 +26,19 @@ public class TeamServiceImpl implements TeamService {
 
         if (!existingTeam.isPresent()) {
             Team newTeam = new Team(playerA, playerB);
-            teamRepository.save(newTeam);
+            validateUniquePlayers(newTeam);
 
+            teamRepository.save(newTeam);
             return newTeam;
         }
 
         return existingTeam.get();
+    }
+
+    private void validateUniquePlayers(Team newTeam) {
+        if (!new TeamUniquePlayersSpecification().test(newTeam)) {
+            throw new IllegalArgumentException("A team cannot contain duplicated players");
+        }
     }
 
 }
