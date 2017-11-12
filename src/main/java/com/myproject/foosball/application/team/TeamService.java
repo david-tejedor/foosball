@@ -6,5 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface TeamService {
+
     Team getOrCreate(Player playerA, Player playerB);
+
 }
