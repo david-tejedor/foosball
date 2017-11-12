@@ -2,12 +2,13 @@ package com.myproject.foosball.domain.match;
 
 import com.myproject.foosball.domain.player.Player;
 
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-public class MatchUniquePlayersSpecification extends MatchSpecification {
+public class MatchUniquePlayersSpecification implements Predicate<Match> {
 
     @Override
-    public boolean isSatisfiedBy(Match match) {
+    public boolean test(Match match) {
         Player playerA1 = match.teamScoreA.team.playerA;
         Player playerA2 = match.teamScoreA.team.playerB;
 

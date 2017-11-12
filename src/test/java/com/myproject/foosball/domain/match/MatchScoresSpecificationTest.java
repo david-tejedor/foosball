@@ -13,37 +13,37 @@ public class MatchScoresSpecificationTest {
 
     @Test
     public void isSatisfiedBy_2_0_true() throws Exception {
-        assertTrue(matchScoresSpecification.isSatisfiedBy(matchWithScores(2, 0)));
+        assertTrue(matchScoresSpecification.test(matchWithScores(2, 0)));
     }
 
     @Test
     public void isSatisfiedBy_1_2_true() throws Exception {
-        assertTrue(matchScoresSpecification.isSatisfiedBy(matchWithScores(1, 2)));
+        assertTrue(matchScoresSpecification.test(matchWithScores(1, 2)));
     }
 
     @Test
     public void isSatisfiedBy_1_1_true() throws Exception {
-        assertTrue(matchScoresSpecification.isSatisfiedBy(matchWithScores(1, 1)));
+        assertTrue(matchScoresSpecification.test(matchWithScores(1, 1)));
     }
 
     @Test
     public void isSatisfiedBy_3_1_false() throws Exception {
-        assertFalse(matchScoresSpecification.isSatisfiedBy(matchWithScores(3, 1)));
+        assertFalse(matchScoresSpecification.test(matchWithScores(3, 1)));
     }
 
     @Test
     public void isSatisfiedBy_0_0_false() throws Exception {
-        assertFalse(matchScoresSpecification.isSatisfiedBy(matchWithScores(0, 0)));
+        assertFalse(matchScoresSpecification.test(matchWithScores(0, 0)));
     }
 
     @Test
     public void isSatisfiedBy_2_2_false() throws Exception {
-        assertFalse(matchScoresSpecification.isSatisfiedBy(matchWithScores(2, 2)));
+        assertFalse(matchScoresSpecification.test(matchWithScores(2, 2)));
     }
 
     @Test
     public void isSatisfiedBy_negative_false() throws Exception {
-        assertFalse(matchScoresSpecification.isSatisfiedBy(matchWithScores(2, -1)));
+        assertFalse(matchScoresSpecification.test(matchWithScores(2, -1)));
     }
 
     private Match matchWithScores(int scoreA, int scoreB) {

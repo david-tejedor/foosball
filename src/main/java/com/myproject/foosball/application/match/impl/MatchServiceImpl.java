@@ -41,13 +41,13 @@ public class MatchServiceImpl implements MatchService {
     }
 
     private void validateUniquePlayers(Match match) {
-        if (!new MatchUniquePlayersSpecification().isSatisfiedBy(match)) {
+        if (!new MatchUniquePlayersSpecification().test(match)) {
             throw new IllegalArgumentException("Both teams cannot contain same player");
         }
     }
 
     private void validateScores(Match match) {
-        if (!new MatchScoresSpecification().isSatisfiedBy(match)) {
+        if (!new MatchScoresSpecification().test(match)) {
             throw new IllegalArgumentException("Invalid match scores");
         }
     }

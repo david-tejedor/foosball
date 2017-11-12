@@ -23,7 +23,7 @@ public class MatchUniquePlayersSpecificationTest {
         Pair<Player, Player> playersA = Pair.of(p1, p2);
         Pair<Player, Player> playersB = Pair.of(p3, p4);
 
-        assertTrue(matchUniquePlayersSpecification.isSatisfiedBy(matchWithPlayers(playersA, playersB)));
+        assertTrue(matchUniquePlayersSpecification.test(matchWithPlayers(playersA, playersB)));
     }
 
     @Test
@@ -31,7 +31,7 @@ public class MatchUniquePlayersSpecificationTest {
         Pair<Player, Player> playersA = Pair.of(p1, p4);
         Pair<Player, Player> playersB = Pair.of(p3, p4);
 
-        assertFalse(matchUniquePlayersSpecification.isSatisfiedBy(matchWithPlayers(playersA, playersB)));
+        assertFalse(matchUniquePlayersSpecification.test(matchWithPlayers(playersA, playersB)));
     }
 
     private Match matchWithPlayers(Pair<Player, Player> playersA,

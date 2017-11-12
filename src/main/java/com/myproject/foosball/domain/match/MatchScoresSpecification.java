@@ -2,12 +2,14 @@ package com.myproject.foosball.domain.match;
 
 import com.myproject.foosball.domain.team.TeamScore;
 
-public class MatchScoresSpecification extends MatchSpecification {
+import java.util.function.Predicate;
+
+public class MatchScoresSpecification implements Predicate<Match> {
 
     // possibility to customize it entering possible results to constructor
 
     @Override
-    public boolean isSatisfiedBy(Match match) {
+    public boolean test(Match match) {
         if (isWinner(match.teamScoreA)) {
             return isLooser(match.teamScoreB);
 
